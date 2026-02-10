@@ -1,11 +1,11 @@
 ---
 title: "My Data Visualization Portfolio"
 format:
-html:
-output-file: index.html
+  html:
+    output-file: index.html
 execute:
-echo: true
-eval: true
+  echo: true
+  eval: true
 ---
 # Welcome to My Portfolio! 📊
 Hello! My nickname is Rizwanj. This is my Quarto data visualization portfolio s
@@ -50,5 +50,4 @@ str(value), ha='center', va='bottom')
 plt.show()
 ```
 :::
-## Conclusion
-This demonstrates how Quarto can seamlessly integrate Python code and visualizations into professional way. 
+

@@ -1,0 +1,63 @@
+---
+title: "Random Data Scatter Plot"
+format: html
+jupyter: python3
+---
+
+## Scatter Plot
+
+```{python}
+#| label: fig-scatter
+#| fig-cap: "Scatter plot of random data points"
+#| echo: false
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+np.random.seed(42)
+n = 100
+x = np.random.normal(loc=50, scale=15, size=n)
+y = 2 * x + np.random.normal(loc=0, scale=20, size=n)
+
+fig, ax = plt.subplots()
+ax.scatter(x, y, alpha=0.6, s=50, c='#3366cc')
+ax.set_title("Random Data Scatter Plot")
+ax.set_xlabel("X values")
+ax.set_ylabel("Y values")
+ax.grid(True, alpha=0.3)
+plt.tight_layout()
+plt.show()
+```
+
+## Pie Chart
+
+```{python}
+#| label: fig-pie
+#| fig-cap: "Pie chart with sample data"
+#| echo: false
+
+import matplotlib.pyplot as plt
+
+labels = ['Category A', 'Category B', 'Category C', 'Category D', 'Category E']
+sizes = [25, 30, 20, 15, 10]
+colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#ffeaa7']
+explode = (0, 0.05, 0, 0, 0)
+
+fig, ax = plt.subplots()
+ax.pie(sizes, explode=explode, labels=labels, colors=colors, autopct='%1.1f%%',
+       shadow=True, startangle=90)
+ax.set_title("Sample Data Distribution")
+plt.tight_layout()
+plt.show()
+```
+
+## What is Matplotlib?
+
+**Matplotlib** is a powerful, widely used Python library for creating static, animated, and interactive visualizations. Originally developed by John D. Hunter in 2003, it has become the de facto standard for data visualization in the Python scientific computing ecosystem.
+
+### Why is Matplotlib Useful?
+
+- **Flexibility** — It provides fine-grained control over every element of a plot (axes, labels, colors, legends, etc.), making it suitable for publication-quality figures.
+- **Integration** — It works seamlessly with NumPy, Pandas, and other data science libraries, and serves as the foundation for higher-level libraries like Seaborn and plotly.
+- **Versatility** — It supports many chart types (line plots, scatter plots, bar charts, histograms, heatmaps, and more) across 2D and 3D.
+- **Adoption** — It is mature, well-documented, and used extensively in academia and industry, so there is abundant documentation and community support.
